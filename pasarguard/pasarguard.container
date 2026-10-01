@@ -1,0 +1,12 @@
+[Unit]
+Description=PasarGuard panel container
+
+[Container]
+ContainerName=pasarguard
+Image=docker.io/pasarguard/panel:v5.4.1
+Pod=pasarguard.pod
+EnvironmentFile=%h/.config/pasarguard.env
+Volume=pasarguard-volume.volume:/var/lib/pasarguard
+
+[Service]
+Restart=always
