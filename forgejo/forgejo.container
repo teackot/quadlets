@@ -1,0 +1,15 @@
+[Container]
+ContainerName=forgejo
+User=1000
+Group=1000
+Environment=USER_UID=1000
+Environment=USER_GID=1000
+Image=codeberg.org/forgejo/forgejo:14-rootless
+Network=forgejo.network
+PublishPort=33000:3000
+PublishPort=22222:2222
+Volume=forgejo-data:/var/lib/gitea
+Volume=forgejo-conf:/etc/gitea
+
+[Service]
+Restart=always

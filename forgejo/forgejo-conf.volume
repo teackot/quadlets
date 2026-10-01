@@ -1,0 +1,4 @@
+[Volume]
+VolumeName=forgejo-conf
+UID=1000
+GID=1000
